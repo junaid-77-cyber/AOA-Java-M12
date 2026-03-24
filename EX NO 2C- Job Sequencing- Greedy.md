@@ -1,48 +1,80 @@
 
-# EX 1C Job Sequencing using Greedy Approach
-## DATE:
+# EX 2C Job Sequencing using Greedy Approach
+
 ## AIM:
-To write a Java program to for given constraints.
-Given an integer array nums and an integer k, return the number of pairs (i, j) where i < j such that |nums[i] - nums[j]| == k.
+Given arrival and departure times of n trains, determine the maximum number of trains that can be accommodated on a single platform without overlapping schedules.
 
-The value of |x| is defined as:
+Rule:
 
-x if x >= 0.
--x if x < 0.You're given N jobs, each with:
+Only one train can be on the platform at a time.
 
-A unique jobId
-
-A deadline (by which it must be completed)
-
-A profit (earned only if completed on or before the deadline)
-
-Each job:
-
-Takes exactly 1 unit of time
-
-Only one job can be done at a time
-
-Your goal is to maximize total profit while completing the maximum number of jobs possible within their deadlines.
+A train can arrive exactly when another departs (i.e., no overlap if arrival ≥ prev departure).
 
 ## Algorithm
-1. 
-2. 
-3. 
-4.  
-5.   
+1. Start the program.
+
+2. Read input:
+   - Read integer `n` (number of trains)
+   - Input arrival and departure times for each train
+
+3. Sort the trains:
+   - Sort the trains based on departure time in ascending order
+
+4. Apply greedy selection:
+   - Initialize `count = 1` (first train is selected)
+   - Set `lastDeparture` as departure time of first train
+   - Traverse remaining trains:
+     - If arrival time ≥ lastDeparture:
+       - Select train
+       - Increment count
+       - Update lastDeparture
+
+5. Output result:
+   - Print the maximum number of trains that can use a single platform
+   - Stop the program
 
 ## Program:
-```
+```java
 /*
 Program to implement Reverse a String
-Developed by: 
-Register Number:  
+Developed by: Junaid Sardar S
+Register Number: 212224100028  
 */
+
+import java.util.*;
+
+public class PlatformScheduler {
+
+    public static int maxTrainsOnPlatform(int[][] trains) {
+        Arrays.sort(trains, (a,b) -> a[1] - b[1]);
+        int count = 1;
+        int lastDeparture = trains[0][1];
+        for(int i = 1; i < trains.length;i++){
+            if(trains[i][0] >= lastDeparture){
+                count++;
+                lastDeparture = trains[i][1];
+            }
+        }
+        return count;
+    }
+
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        int n = sc.nextInt(); // number of trains
+        int[][] trains = new int[n][2];
+
+        for (int i = 0; i < n; i++) {
+            trains[i][0] = sc.nextInt(); // arrival time
+            trains[i][1] = sc.nextInt(); // departure time
+        }
+
+        System.out.println("Maximum trains on a single platform: " + maxTrainsOnPlatform(trains));
+    }
+}
 ```
 
 ## Output:
-
-
+![alt text](12.2c.png)
 
 ## Result:
 The program successfully implemented and the expected output is verified.
