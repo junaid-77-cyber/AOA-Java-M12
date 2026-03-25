@@ -34,7 +34,7 @@ using Manacher's Algorithm
 ## Program:
 ```java
 /*
-Program to implement Reverse a String
+Program to find the longest palindromic substring using Manacher's algorithm
 Developed by: Junaid Sardar S
 Register Number: 212224100028
 */

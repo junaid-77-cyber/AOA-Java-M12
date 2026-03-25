@@ -38,7 +38,7 @@ Determine if you can reach the last index starting from index 0, without ever la
 ## Program:
 ```java
 /*
-Program to implement Reverse a String
+Program to determine if the end of an array can be reached considering jump lengths and dead-end positions
 Developed by: Junaid Sardar S
 Register Number: 212224100028
 */

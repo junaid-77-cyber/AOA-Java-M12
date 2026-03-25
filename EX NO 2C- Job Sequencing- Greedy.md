@@ -36,11 +36,10 @@ A train can arrive exactly when another departs (i.e., no overlap if arrival ≥
 ## Program:
 ```java
 /*
-Program to implement Reverse a String
+Program to find the maximum number of trains that can be scheduled on a single platform without overlapping
 Developed by: Junaid Sardar S
 Register Number: 212224100028  
 */
-
 import java.util.*;
 
 public class PlatformScheduler {

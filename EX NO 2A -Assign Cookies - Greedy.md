@@ -34,7 +34,7 @@ We define an array to be non-decreasing if nums[i] <= nums[i + 1] it holds for e
 ## Program:
 ```java
 /*
-Program to implement Reverse a String
+Program to check if an array can be made non-decreasing with at most one modification
 Developed by: Junaid Sardar S
 Register Number: 212224100028
 */

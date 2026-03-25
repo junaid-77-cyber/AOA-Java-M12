@@ -41,7 +41,7 @@ Output: Pattern found at index 0, Pattern found at index 9, Pattern found at ind
 ## Program:
 ```java
 /*
-Program to implement Reverse a String
+Program to perform pattern searching using the Boyer-Moore algorithm
 Developed by: Junaid Sardar S
 Register Number: 212224100028
 */
